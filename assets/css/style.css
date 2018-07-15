@@ -11,6 +11,8 @@ html {
 
 html, body {
     height:100%;
+    background-color: rgb(251, 226, 255);
+    /* background-size: cover; */
 }
 
 /* Outer grid */
@@ -82,8 +84,10 @@ body > section.intro > header {
 /* –– */
 
 /* Grid for answers section */
-.main {
+article.main {
     background-color: rgb(251, 226, 255);
+    /* height: 100%; */
+    background-size: cover;
 }
 
 .answers {
@@ -95,6 +99,7 @@ body > section.intro > header {
     margin: auto;
     height: 200%;
     overflow: hidden;
+    padding-top: 50px;
 }
 
 figure {
