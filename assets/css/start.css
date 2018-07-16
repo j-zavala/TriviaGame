@@ -1,14 +1,77 @@
-.wrapper {
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+
+.grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     grid-auto-rows: 200px;
-    grid-template-areas: 
+    grid-template-areas:
+      ". t t ."
       ". a a ."
       ". a a .";
   }
+
   .item1 {
+      grid-area: t;
+      align-self: center;
+      justify-self: center;
+  }
+
+  .item2 {
     grid-area: a;
     align-self: center;
     justify-self: center;
   }
+
+  button {
+      cursor: pointer;
+      padding: 30px;
+      border-radius: 40px;
+      font-family: 'Knewave', cursive;
+      animation-name: stretch;
+      animation-duration: 1.5s; 
+      animation-timing-function: ease-out; 
+      animation-delay: 0;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      animation-play-state: running;
+  }
+
+    /* Animates start button */
+    @keyframes stretch {
+        0% {
+          transform: scale(.3);
+          background-color: red;
+          border-radius: 100%;
+        }
+        50% {
+          background-color: orange;
+        }
+        100% {
+          transform: scale(1.5);
+          background-color: yellow;
+        }
+      }
+
+
+  h1 {
+    place-self: center;
+    font-family: 'Knewave', cursive;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 4em;
+  }
+
+  body {
+      height: 100%;
+      background-color: #f4ac54;
+
+  }
+
