@@ -102,6 +102,10 @@ article.main {
     padding-top: 50px;
 }
 
+.ans {
+    cursor: pointer;
+}
+
 figure {
     overflow: hidden;
     border: 1px solid rgba(223, 218, 218, 0.872);
