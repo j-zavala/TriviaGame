@@ -1,9 +1,9 @@
-$( document ).ready(function() {
-    //On click, run function
-    $(".item").on("click", linkToIndex);
 
-    //go to index.html link
-    function linkToIndex() {
-        window.location.href='/index.html';
-    }
+function linkToIndex() {
+    window.location.href='/index.html';
+}
+
+$( document ).ready(function() {
+    //On click, go to index.html link
+    $(".item").on("click", linkToIndex);
 });

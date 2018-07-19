@@ -5,11 +5,14 @@ var intervalId;
 var clockRunning = false;
 
 let stopwatch = {
-    time: 21,
+    time: 31,
 
     reset: function()
     {
+        stopwatch.time = 31;
 
+        // DONE: Change the "display" div to "00:00."
+        // $(".display").text("30:00");
     },
 
     start: function() {
@@ -82,163 +85,231 @@ let onStart = {
                   'Finally, which news event did not happen this year?'],
 
     loadQuestion: function() {
-        for (let i = 0; i < onStart.questionArr.length; i++)
+        $(".question").text(onStart.questionArr[0]);
+        for (let i = 1; i < onStart.questionArr.length; i++)
         {
             setTimeout(function() {
                 $(".question").text(onStart.questionArr[i]);
-            }, 5000);
+            }, 30000);
         }
     },
 
     loadAnswers: function()
     {
+
+        let figures =  $(".answers")[0];
+
+        console.log(figures);
+
         
+
+
+
+            //target answers section's img tag and store it in a variable
+            // let imgTag = section[i];
+
+            //target answers section's figcaption tag and store it in a variable
+            // let figCapTag = section[i];
+
+        //for each item in the choices object
+        //go into combos.#.choices, and go through each item in that object (for loop)
+
+        //change img's url src attribute to item url
+
+        //change img's figcaption content to item choice
+
+
     },
 
     // Checks if right or wrong answer was picked
     checkIfRight: function()
     {
-        
+        //on click, if answer is right
+        //then in results section say "Right!"
+        //if not, 
+        //then in results section say "Wrong!"
+
     }
 }
 
-let combos = {
-    1: {
+
+// combos = [
+//     {Q: '',
+//     Ans: [
+//         {Ans1: {}}, 
+//         {Ans2: {}}
+//         ]
+//     }
+// ]
+
+let combos = [
+    {
         question: 'Which film won the Academy award for Best Picture?',
-        choices: {
-            a: {
-                choice: 'The Shape of Water*',
-                url: "https://images-na.ssl-images-amazon.com/images/I/91zVdTOnQFL._RI_.jpg"
+        choices: [
+            {
+                choice: 'The Shape of Water',
+                url: "https://images-na.ssl-images-amazon.com/images/I/91zVdTOnQFL._RI_.jpg",
+                value: true
             },
-            b: {
+            {
                 choice: 'Call Me by Your Name',
-                url: 'https://img1.od-cdn.com/ImageType-100/1493-1/%7B3F1635DA-BC24-42BA-BD6C-80F5866906FF%7DImg100.jpg'
+                url: 'https://img1.od-cdn.com/ImageType-100/1493-1/%7B3F1635DA-BC24-42BA-BD6C-80F5866906FF%7DImg100.jpg',
+                value: false
             },
-            c: {
+            {
                 choice: 'Three Billboards Outside Ebbing, Missouri',
-                url: 'http://creativebrisbane.com.au/wp-content/uploads/2017/12/TBOEM_au_ss_600x600_creative_brisbane_static_DATE.jpg'
+                url: 'http://creativebrisbane.com.au/wp-content/uploads/2017/12/TBOEM_au_ss_600x600_creative_brisbane_static_DATE.jpg',
+                value: false
             },
-            d: {
+            {
                 choice: 'Lady Bird',
-                url: 'https://images-na.ssl-images-amazon.com/images/I/A1sU+Yf+V9L._RI_.jpg'
+                url: 'https://images-na.ssl-images-amazon.com/images/I/A1sU+Yf+V9L._RI_.jpg',
+                value: false
             }
-        }
+        ]
     },
-    2: {
+    {
         question: 'Which couple did NOT tie the knot in 2018?',
-        choices: {
-            a:  {
+        choices: [
+            {
                 choice: 'Prince Harry and Meghan Markle',
-                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2'
+                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2',
+                value: false
             },
-            b:  {
+            {
                 choice: 'Kit Harington and Rose Leslie',
-                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2'
+                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2',
+                value: false
             },
-            c:  {
+            {
                 choice: 'Amy Schumer and Chris Fischer',
-                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2'
+                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2',
+                value: false
             },
-            d:  {
+            {
                 choice: 'Alicia Vikander and Michael Fassbender*',
-                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2'
+                url: 'https://t3.rbxcdn.com/311030e04c181b657abaac1784eed2f2',
+                value: true
             }
-        }
+        ]
     },
-    3: {
+    {
         question: 'Which song won the Grammy for Record of the Year?',
-        choices: {
-            a: {
+        choices: [
+            {
                 choice: '"Humble" by Kendrick Lamar',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/16/enhanced/buzzfeed-prod-web-06/enhanced-buzz-11713-1529960083-9.jpg?downsize=1700:*&amp;output-format=auto&amp;output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/16/enhanced/buzzfeed-prod-web-06/enhanced-buzz-11713-1529960083-9.jpg?downsize=1700:*&amp;output-format=auto&amp;output-quality=auto',
+                value: false
             },
-            b: {
+            {
                 choice: '"Despacito" by Luis Fonsi & Daddy Yankee feat. Justin Bieber',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/16/enhanced/buzzfeed-prod-web-04/enhanced-buzz-22809-1529960238-2.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/16/enhanced/buzzfeed-prod-web-04/enhanced-buzz-22809-1529960238-2.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             },
-            c: {
+            {
                 choice: '"24K Magic" by Bruno Mars*',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/16/enhanced/buzzfeed-prod-web-02/enhanced-buzz-32528-1529960381-10.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/16/enhanced/buzzfeed-prod-web-02/enhanced-buzz-32528-1529960381-10.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: true
             },
-            d: {
+            {
                 choice: '"The Story of O.J." by Jay-Z',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-05/enhanced-buzz-7331-1529960768-0.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-05/enhanced-buzz-7331-1529960768-0.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             }
-        }
+        ]
     },
-    4: {
+    {
         question: 'Who performed at the Superbowl Halftime Show?',
-        choices: {
-            a: {
+        choices: [
+            {
                 choice: 'Bruno Mars',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-03/enhanced-buzz-7347-1529962589-0.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-03/enhanced-buzz-7347-1529962589-0.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             },
-            b: {
+            {
                 choice: 'Justin Timberlake*',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-04/enhanced-buzz-404-1529962287-2.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-04/enhanced-buzz-404-1529962287-2.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: true
             },
-            c: {
+            {
                 choice: 'Beyoncé',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-03/enhanced-buzz-7398-1529962535-0.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-03/enhanced-buzz-7398-1529962535-0.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             },
-            d: {
+            {
                 choice: 'Lady Gaga',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-02/enhanced-buzz-10038-1529962443-1.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/25/17/enhanced/buzzfeed-prod-web-02/enhanced-buzz-10038-1529962443-1.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             }
-        }
+        ]
     },
-    5: {
+    {
         question: 'Which album came out this year?',
-        choices: {
-            a: {
+        choices: [
+            {
                 choice: 'Ctrl by SZA',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-03/enhanced-buzz-14893-1530121104-12.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-03/enhanced-buzz-14893-1530121104-12.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             },
-            b: {
+            {
                 choice: 'Invasion of Privacy by Cardi B*',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-01/enhanced-buzz-26886-1530120970-12.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-01/enhanced-buzz-26886-1530120970-12.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: true
             },
-            c: {
+            {
                 choice: 'Reputation by Taylor Swift',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-05/enhanced-buzz-25057-1530121033-6.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-05/enhanced-buzz-25057-1530121033-6.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             },
-            d: {
+            {
                 choice: 'Tell Me You Love Me by Demi Lovato',
-                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-02/enhanced-buzz-18506-1530121229-0.jpg?downsize=715:*&output-format=auto&output-quality=auto'
+                url: 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/27/13/enhanced/buzzfeed-prod-web-02/enhanced-buzz-18506-1530121229-0.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+                value: false
             }
-        }
+        ]
     },
-    6: {
+    {
         question: 'Finally, which news event did not happen this year?',
-        choices: {
-            a: {
+        choices: [
+            {
                 choice: "Hawaii's Kilauea volcano erupted",
-                url: ''
+                url: '',
+                value: false
             },
-            b: {
+            {
                 choice: 'President Trump and Kim Jong Un met',
-                url: ''
+                url: '',
+                value: false
             },
-            c: {
+            {
                 choice: "Austrialia voted yes to same-sex marriage*",
-                url: ''
+                url: '',
+                value: true
             },
-            d: {
+            {
                 choice: "Rex Tillerson got fired from the State Department",
-                url: ''
+                url: '',
+                value: false
             }
-        }
+        ]
     }
-}
+]
+
+
+
 
 
 $( document ).ready(function() 
 {
-    stopwatch.start();
+    onStart.loadAnswers();
     onStart.loadQuestion();
-    $(".ans").on("click", stopwatch.stop);
+
+    //load question
+    //load answer
+    //start timer
+    
 
     
 
-    // setInterval(stopwatch.stop(), 5000);
+   
 });
