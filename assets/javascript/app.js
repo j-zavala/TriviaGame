@@ -87,6 +87,7 @@ let onStart = {
 
         let correctChoices = ['23', 'blue', 'Frontend development', 'pretty awesome', 'Ecuador', 'road bike', '1 hour 30 min'];
         let selectedChoices = [];
+        let results = [];
         $("button[type='submit']").click(function() {
 
             //On submit, store id of checked radio input into selectedChoices array
@@ -94,11 +95,10 @@ let onStart = {
             //if id matches the string at index i of correctChoices array
 
             //console.log that question i is right
+            //to results array, push 'right' string at index i of results array
 
             //else if console.log that question i is wrong
-
-
-
+            //to results array, push 'wrong' string at index i of results array
 
         });
     }
@@ -109,4 +109,15 @@ let onStart = {
 $( document ).ready(function() {
     onStart.respondToClicks();
     stopwatch.start();
+
+    //select .questions section, and empty its content
+
+    //create div element and store in variable
+
+    //go through correctChoices array, 
+
+    //create h2 tag in new div
+
+    //add value at each index of the correctChoices array to that div under an h2 tag
+
 });
