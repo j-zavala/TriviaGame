@@ -74,6 +74,35 @@ body {
     background-color: #bdd4e7;
     background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);    
     list-style-type: upper-roman;
-    
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+
+form div {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+input {
+    cursor: pointer;
+}
+
+.button-flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    display: block;
+    width: 100px;
+    position: relative;
+    left: 130px;
+    top: 80px;
+    font-size: 1em;
+    margin: 10px;
 }
 

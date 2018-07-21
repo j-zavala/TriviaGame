@@ -20,25 +20,111 @@
             </section>
             <section class="questions">
                 <ul class="question-flexbox">
-                    <li>How old is Johnny?</li>
-                    <li>What is Johnny's favorite color? </li>
-                    <li>What Johnny really interested in?</li>
-                    <li>How awesome is this trivia so far?</li>
-                    <li>Where was Johnny born?</li>
-                    <li>What type of bike does Johnny have?</li>
-                    <li>How long is Johnny's commute to Columbia University?</li>
-                </ul>
+                    <li id="q1">
+                        <h3>How old is Johnny?</h3>
+                        <form action="">
+                            <div><input type="radio" id="just-born" name="age" />
+                            <label for="just born">Just born</label></div>
+                            <div><input type="radio" id="23" name="age" />
+                            <label for="23">23</label></div>
+                            <div><input type="radio" id="16" name="age" />
+                            <label for="16">16</label></div>
+                            <div><input type="radio" id="45" name="age" />
+                            <label for="45">45</label></div>
+                        </form>
+                    </li>
+                    <li id="q2">
+                        <h3>What is Johnny's favorite color?</h3>
+                        <form action="">
+                            <div><input type="radio" name="" id="">
+                            <label for="">blue</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">red</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">pink</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">green</label></div>
+                        </form>
+                    </li>
+                    <li id="q3">
+                        <h3>What is Johnny really interested in?</h3>
+                        <form action="">
+                            <div><input type="radio" id="" name="" />
+                            <label for="">Frontend development</label></div>
+                            <div><input type="radio" id="" name="" />
+                            <label for="">linear algebra</label></div>
+                            <div><input type="radio" id="" name="" />
+                            <label for="">sleeping</label></div>
+                            <div><input type="radio" id="" name="" />
+                            <label for="">backend development</label></div>
+                        </form>
+                    </li>
+                        <li id="q4">
+                        <h3>How awesome is this trivia so far?</h3>
+                        <form action="">
+                            <div><input type="radio" name="" id="">
+                            <label for="">kinda sucks dude</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">bloody rad man</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">pretty awesome</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">eh, seen worse</label></div>
+                        </form>
+                    </li>
+                    <li id="q5">
+                        <h3>Where was Johnny born?</h3>
+                        <form action="">
+                            <div><input type="radio" id="" name="" />
+                            <label for="">Hong Kong</label></div>
+                            <div><input type="radio" id="" name="" />
+                            <label for="">US</label></div>
+                            <div><input type="radio" id="" name="" />
+                            <label for="">Canada</label></div>
+                            <div><input type="radio" id="" name="" />
+                            <label for="">Ecuador</label></div>
+                        </form>
+                    </li>
+                    <li id="q6">
+                        <h3>What type of bike does Johnny have?</h3>
+                        <form action="">
+                            <div><input type="radio" name="" id="">
+                            <label for="">mountain bike</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">folding bike</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">road bike</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">cruiser bike</label></div>
+                        </form>
+                    </li>
+                    <li id="q7">
+                        <h3>How long is Johnny's commute to Columbia University?</h3>
+                        <form action="">
+                            <div><input type="radio" name="" id="">
+                            <label for="">15 mintues</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">30 min</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">1 hour 30 min</label></div>
+                            <div><input type="radio" name="" id="">
+                            <label for="">I live just a block away</label></div>
+                        </form>
+                    </li>
+                </ul>      
             </section>
         </main>
         <footer>
             <nav>
-                <ul>
-                    <li></li>
+                <ul class="button-flexbox">
+                    <li><button type="submit">Submit</button></li>
+                    <li><button type="submit">Start Over</button></li>
                 </ul>
             </nav>
             <section></section>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./assets/javascript/app.js"></script>
 </body>
 </html>
