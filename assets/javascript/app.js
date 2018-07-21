@@ -79,14 +79,6 @@ let stopwatch = {
 
 let onStart = {
 
-    loadAnswers: function() {
-        //select each question and store in a variable
-
-        //create 
-
-        //
-    },
-
     startTimer: function() {
 
     },
@@ -98,6 +90,14 @@ let onStart = {
         $("button[type='submit']").click(function() {
 
             //On submit, store id of checked radio input into selectedChoices array
+
+            //if id matches the string at index i of correctChoices array
+
+            //console.log that question i is right
+
+            //else if console.log that question i is wrong
+
+
 
 
         });
